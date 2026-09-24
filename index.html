@@ -18,6 +18,7 @@
     fbq('init', '1802539944322145');
     fbq('track', 'PageView');
     </script>
+
     <noscript>
     <img height="1" width="1" style="display:none" 
     src="https://www.facebook.com/tr?id=1802539944322145&ev=PageView&noscript=1"/>
@@ -166,7 +167,7 @@
             align-items: center;
         }
 
-        /* ----- LOGO (NEW URL) ----- */
+        /* ----- LOGO ----- */
         .logo-wrap {
             position: relative;
             margin-bottom: 1.8rem;
@@ -299,7 +300,7 @@
             line-height: 1;
         }
 
-        /* ----- STATS (compact) ----- */
+        /* ----- STATS ----- */
         .stats-row {
             display: flex;
             flex-wrap: wrap;
@@ -343,9 +344,9 @@
             text-transform: uppercase;
         }
 
-        /* ----- CTA BUTTON (alternative direct link) ----- */
+        /* ----- CTA BUTTON ----- */
         .cta-direct {
-            margin: 1.2rem 0 0.8rem;
+            margin: 0.2rem 0 0.8rem;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -375,13 +376,20 @@
         }
 
         @keyframes btnGlow {
-            0%, 100% { box-shadow: 0 10px 30px rgba(0, 240, 160, 0.4), 0 0 20px rgba(0, 200, 255, 0.3); }
-            50% { box-shadow: 0 10px 40px rgba(0, 240, 160, 0.7), 0 0 40px rgba(0, 200, 255, 0.5); }
+            0%, 100% {
+                box-shadow: 0 10px 30px rgba(0, 240, 160, 0.4),
+                            0 0 20px rgba(0, 200, 255, 0.3);
+            }
+            50% {
+                box-shadow: 0 10px 40px rgba(0, 240, 160, 0.7),
+                            0 0 40px rgba(0, 200, 255, 0.5);
+            }
         }
 
         .btn-telegram:hover {
             transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 20px 50px rgba(0, 240, 160, 0.6), 0 0 60px rgba(0, 200, 255, 0.5);
+            box-shadow: 0 20px 50px rgba(0, 240, 160, 0.6),
+                        0 0 60px rgba(0, 200, 255, 0.5);
         }
 
         .btn-telegram::before {
@@ -391,7 +399,12 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.5),
+                transparent
+            );
             transition: left 0.6s;
         }
 
@@ -484,7 +497,7 @@
             width: 100%;
         }
 
-        /* Loading bar (very subtle) */
+        /* Loading bar */
         .loading-line {
             position: fixed;
             top: 0;
@@ -496,8 +509,13 @@
         }
 
         @keyframes loadBar {
-            0% { width: 0; }
-            100% { width: 100%; opacity: 0; }
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+                opacity: 0;
+            }
         }
 
         /* Responsive */
@@ -506,36 +524,47 @@
                 padding: 1.8rem 1rem;
                 border-radius: 28px;
             }
+
             .logo-img {
                 width: 110px;
                 height: 110px;
             }
+
             .btn-telegram {
                 font-size: 1rem;
                 padding: 0.9rem 1.8rem;
             }
+
             .stat-item {
                 padding: 0.6rem 1rem;
                 min-width: 90px;
             }
+
             .stat-value {
                 font-size: 1.4rem;
             }
-            .timer-ring, .timer-svg {
+
+            .timer-ring,
+            .timer-svg {
                 width: 90px;
                 height: 90px;
             }
+
             .timer-number {
                 font-size: 2rem;
             }
+
             .timer-circle-progress {
-                stroke-dasharray: 251; /* 2 * pi * 40 */
+                stroke-dasharray: 251;
             }
         }
     </style>
+
     <base target="_blank">
 </head>
+
 <body>
+
     <!-- Loading indicator -->
     <div class="loading-line"></div>
 
@@ -547,11 +576,13 @@
 
     <!-- Main content -->
     <div class="main-wrapper">
+
         <div class="glass-card">
 
-            <!-- LOGO with provided URL -->
+            <!-- LOGO -->
             <div class="logo-wrap">
                 <div class="logo-ring"></div>
+
                 <img 
                     src="https://i.postimg.cc/ydzJcccX/image-2026-09-24-103529107.png" 
                     alt="Tradeon Logo" 
@@ -562,214 +593,441 @@
 
             <!-- Title -->
             <h1 class="title-main">Tradeon</h1>
-            <div class="subtitle">Pocket Option Signals</div>
 
-            <!-- TIMER: 10 sec auto-redirect -->
+            <div class="subtitle">
+                Pocket Option Signals
+            </div>
+
+            <!-- TIMER -->
             <div class="timer-section">
-                <div class="timer-label">Redirecting to Telegram in</div>
+
+                <div class="timer-label">
+                    Redirecting to Telegram in
+                </div>
+
                 <div class="timer-ring">
+
                     <svg class="timer-svg" viewBox="0 0 120 120">
+
                         <defs>
-                            <linearGradient id="timerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <linearGradient 
+                                id="timerGradient" 
+                                x1="0%" 
+                                y1="0%" 
+                                x2="100%" 
+                                y2="100%"
+                            >
                                 <stop offset="0%" stop-color="#00f0a0" />
                                 <stop offset="100%" stop-color="#00c8ff" />
                             </linearGradient>
                         </defs>
-                        <circle class="timer-circle-bg" cx="60" cy="60" r="50" />
-                        <circle class="timer-circle-progress" id="timerProgress" cx="60" cy="60" r="50" />
+
+                        <circle 
+                            class="timer-circle-bg" 
+                            cx="60" 
+                            cy="60" 
+                            r="50"
+                        />
+
+                        <circle 
+                            class="timer-circle-progress" 
+                            id="timerProgress" 
+                            cx="60" 
+                            cy="60" 
+                            r="50"
+                        />
+
                     </svg>
-                    <span class="timer-number" id="timerNumber">10</span>
+
+                    <span 
+                        class="timer-number" 
+                        id="timerNumber"
+                    >
+                        10
+                    </span>
+
                 </div>
             </div>
 
-            <!-- Stats compact -->
-            <div class="stats-row">
-                <div class="stat-item">
-                    <div class="stat-value">95%</div>
-                    <div class="stat-label">Accuracy</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">24/7</div>
-                    <div class="stat-label">Signals</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">FREE</div>
-                    <div class="stat-label">Access</div>
-                </div>
-            </div>
+            <!-- ================================================= -->
+            <!-- TELEGRAM BUTTON MOVED HERE - DIRECTLY BELOW TIMER -->
+            <!-- ================================================= -->
 
-            <!-- Direct CTA (also triggers fbq) -->
             <div class="cta-direct">
+
                 <a 
                     href="https://telegram.me/+cNJ6jddc7XA5MWNk" 
                     class="btn-telegram" 
                     id="telegramBtn"
                     onclick="fbq('track', 'Lead'); fbq('track', 'CompleteRegistration');"
                 >
-                    <svg class="tg-icon" viewBox="0 0 24 24">
+
+                    <svg 
+                        class="tg-icon" 
+                        viewBox="0 0 24 24"
+                    >
                         <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                     </svg>
+
                     Join Telegram
+
                 </a>
+
+            </div>
+
+            <!-- Stats compact -->
+            <div class="stats-row">
+
+                <div class="stat-item">
+                    <div class="stat-value">95%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">Signals</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-value">FREE</div>
+                    <div class="stat-label">Access</div>
+                </div>
+
             </div>
 
             <!-- Mini features -->
             <div class="features-mini">
+
                 <div class="feature-mini">
                     <span class="feature-emoji">⚡</span>
-                    <div class="feature-txt">Real‑Time Signals</div>
+                    <div class="feature-txt">
+                        Real-Time Signals
+                    </div>
                 </div>
+
                 <div class="feature-mini">
                     <span class="feature-emoji">🎯</span>
-                    <div class="feature-txt">Expert Analysis</div>
+                    <div class="feature-txt">
+                        Expert Analysis
+                    </div>
                 </div>
+
                 <div class="feature-mini">
                     <span class="feature-emoji">💰</span>
-                    <div class="feature-txt">Profit Strategies</div>
+                    <div class="feature-txt">
+                        Profit Strategies
+                    </div>
                 </div>
+
                 <div class="feature-mini">
                     <span class="feature-emoji">🛡️</span>
-                    <div class="feature-txt">Risk Management</div>
+                    <div class="feature-txt">
+                        Risk Management
+                    </div>
                 </div>
+
             </div>
 
             <!-- Trust badges -->
             <div class="trust-row">
-                <div class="pill"><i>✓</i> Verified Signals</div>
-                <div class="pill"><i>⚡</i> Instant Alerts</div>
-                <div class="pill"><i>👥</i> Active Community</div>
+
+                <div class="pill">
+                    <i>✓</i> Verified Signals
+                </div>
+
+                <div class="pill">
+                    <i>⚡</i> Instant Alerts
+                </div>
+
+                <div class="pill">
+                    <i>👥</i> Active Community
+                </div>
+
             </div>
 
             <!-- Footer -->
             <div class="footer-note">
                 ©️ 2026 TRADEON · All rights reserved
             </div>
+
         </div>
     </div>
 
     <script>
+
         (function() {
+
             // ---------- CREATE CANDLE BACKGROUND ----------
+
             function createCandles() {
+
                 const container = document.getElementById('candlesBg');
+
                 if (!container) return;
+
                 const count = 35;
+
                 for (let i = 0; i < count; i++) {
+
                     const candle = document.createElement('div');
+
                     candle.className = 'candle-item';
+
                     candle.style.left = (i * 3.1) + '%';
-                    candle.style.bottom = (Math.random() * 70 + 10) + '%';
+
+                    candle.style.bottom =
+                        (Math.random() * 70 + 10) + '%';
+
                     const isRed = Math.random() > 0.6;
-                    const height = Math.random() * 70 + 20;
-                    const wickTop = Math.random() * 18 + 4;
-                    const wickBottom = Math.random() * 18 + 4;
 
-                    const body = document.createElement('div');
-                    body.className = 'candle-body-bg' + (isRed ? ' red' : '');
-                    body.style.height = height + 'px';
+                    const height =
+                        Math.random() * 70 + 20;
 
-                    const wickTopEl = document.createElement('div');
-                    wickTopEl.style.position = 'absolute';
-                    wickTopEl.style.left = '50%';
-                    wickTopEl.style.transform = 'translateX(-50%)';
-                    wickTopEl.style.width = '2px';
-                    wickTopEl.style.background = 'rgba(255,255,255,0.25)';
-                    wickTopEl.style.height = wickTop + 'px';
-                    wickTopEl.style.bottom = height + 'px';
+                    const wickTop =
+                        Math.random() * 18 + 4;
 
-                    const wickBottomEl = document.createElement('div');
-                    wickBottomEl.style.position = 'absolute';
-                    wickBottomEl.style.left = '50%';
-                    wickBottomEl.style.transform = 'translateX(-50%)';
-                    wickBottomEl.style.width = '2px';
-                    wickBottomEl.style.background = 'rgba(255,255,255,0.25)';
-                    wickBottomEl.style.height = wickBottom + 'px';
-                    wickBottomEl.style.top = '100%';
+                    const wickBottom =
+                        Math.random() * 18 + 4;
+
+                    const body =
+                        document.createElement('div');
+
+                    body.className =
+                        'candle-body-bg' +
+                        (isRed ? ' red' : '');
+
+                    body.style.height =
+                        height + 'px';
+
+                    const wickTopEl =
+                        document.createElement('div');
+
+                    wickTopEl.style.position =
+                        'absolute';
+
+                    wickTopEl.style.left =
+                        '50%';
+
+                    wickTopEl.style.transform =
+                        'translateX(-50%)';
+
+                    wickTopEl.style.width =
+                        '2px';
+
+                    wickTopEl.style.background =
+                        'rgba(255,255,255,0.25)';
+
+                    wickTopEl.style.height =
+                        wickTop + 'px';
+
+                    wickTopEl.style.bottom =
+                        height + 'px';
+
+                    const wickBottomEl =
+                        document.createElement('div');
+
+                    wickBottomEl.style.position =
+                        'absolute';
+
+                    wickBottomEl.style.left =
+                        '50%';
+
+                    wickBottomEl.style.transform =
+                        'translateX(-50%)';
+
+                    wickBottomEl.style.width =
+                        '2px';
+
+                    wickBottomEl.style.background =
+                        'rgba(255,255,255,0.25)';
+
+                    wickBottomEl.style.height =
+                        wickBottom + 'px';
+
+                    wickBottomEl.style.top =
+                        '100%';
 
                     candle.appendChild(wickTopEl);
+
                     candle.appendChild(body);
+
                     candle.appendChild(wickBottomEl);
 
-                    candle.style.animationDelay = (i * 0.15) + 's';
-                    candle.style.animationDuration = (Math.random() * 4 + 5) + 's';
+                    candle.style.animationDelay =
+                        (i * 0.15) + 's';
+
+                    candle.style.animationDuration =
+                        (Math.random() * 4 + 5) + 's';
+
                     container.appendChild(candle);
                 }
             }
 
             // ---------- TIMER & REDIRECT ----------
-            const TELEGRAM_URL = 'https://telegram.me/+cNJ6jddc7XA5MWNk';
+
+            const TELEGRAM_URL =
+                'https://telegram.me/+cNJ6jddc7XA5MWNk';
+
             const TOTAL_SECONDS = 10;
+
             let timeLeft = TOTAL_SECONDS;
+
             let timerInterval = null;
+
             let hasRedirected = false;
 
-            const timerNumberEl = document.getElementById('timerNumber');
-            const timerProgressEl = document.getElementById('timerProgress');
-            const circleLength = 314; // 2 * pi * 50 ≈ 314
+            const timerNumberEl =
+                document.getElementById('timerNumber');
 
-            // init progress
+            const timerProgressEl =
+                document.getElementById('timerProgress');
+
+            const circleLength = 314;
+
+            // Init progress
+
             if (timerProgressEl) {
-                timerProgressEl.style.strokeDasharray = circleLength;
-                timerProgressEl.style.strokeDashoffset = '0';
+
+                timerProgressEl.style.strokeDasharray =
+                    circleLength;
+
+                timerProgressEl.style.strokeDashoffset =
+                    '0';
             }
 
             function updateTimerDisplay() {
-                if (timerNumberEl) timerNumberEl.textContent = timeLeft;
+
+                if (timerNumberEl) {
+
+                    timerNumberEl.textContent =
+                        timeLeft;
+                }
+
                 if (timerProgressEl) {
-                    const offset = circleLength * (1 - timeLeft / TOTAL_SECONDS);
-                    timerProgressEl.style.strokeDashoffset = offset;
+
+                    const offset =
+                        circleLength *
+                        (1 - timeLeft / TOTAL_SECONDS);
+
+                    timerProgressEl.style.strokeDashoffset =
+                        offset;
                 }
             }
 
             function startTimer() {
-                if (timerInterval) clearInterval(timerInterval);
-                timerInterval = setInterval(() => {
-                    timeLeft -= 1;
-                    updateTimerDisplay();
-                    if (timeLeft <= 0) {
-                        clearInterval(timerInterval);
-                        timerInterval = null;
-                        if (!hasRedirected) {
-                            hasRedirected = true;
-                            // open in new tab
-                            window.open(TELEGRAM_URL, '_blank');
-                            // also fire pixel if not already
-                            if (typeof fbq !== 'undefined') {
-                                fbq('track', 'Lead');
-                                fbq('track', 'CompleteRegistration');
+
+                if (timerInterval) {
+
+                    clearInterval(timerInterval);
+                }
+
+                timerInterval =
+                    setInterval(() => {
+
+                        timeLeft -= 1;
+
+                        updateTimerDisplay();
+
+                        if (timeLeft <= 0) {
+
+                            clearInterval(timerInterval);
+
+                            timerInterval = null;
+
+                            if (!hasRedirected) {
+
+                                hasRedirected = true;
+
+                                // Open Telegram in new tab
+                                window.open(
+                                    TELEGRAM_URL,
+                                    '_blank'
+                                );
+
+                                // Fire pixel
+                                if (typeof fbq !== 'undefined') {
+
+                                    fbq(
+                                        'track',
+                                        'Lead'
+                                    );
+
+                                    fbq(
+                                        'track',
+                                        'CompleteRegistration'
+                                    );
+                                }
                             }
                         }
+
+                    }, 1000);
+            }
+
+            // ---------- PAGE LOAD ----------
+
+            window.addEventListener(
+                'load',
+                function() {
+
+                    createCandles();
+
+                    updateTimerDisplay();
+
+                    startTimer();
+
+                    // Manual button click
+
+                    const btn =
+                        document.getElementById(
+                            'telegramBtn'
+                        );
+
+                    if (btn) {
+
+                        btn.addEventListener(
+                            'click',
+                            function(e) {
+
+                                if (
+                                    typeof fbq !==
+                                    'undefined'
+                                ) {
+
+                                    fbq(
+                                        'track',
+                                        'Lead'
+                                    );
+
+                                    fbq(
+                                        'track',
+                                        'CompleteRegistration'
+                                    );
+                                }
+
+                            }
+                        );
                     }
-                }, 1000);
-            }
 
-            // Start timer after DOM ready
-            window.addEventListener('load', function() {
-                createCandles();
-                updateTimerDisplay();
-                startTimer();
-
-                // Manual button click also triggers pixel (already in onclick)
-                const btn = document.getElementById('telegramBtn');
-                if (btn) {
-                    btn.addEventListener('click', function(e) {
-                        // pixel already in onclick, but we ensure it
-                        if (typeof fbq !== 'undefined') {
-                            fbq('track', 'Lead');
-                            fbq('track', 'CompleteRegistration');
-                        }
-                        // if user clicks, we can cancel timer? not necessary, but keep as is
-                    });
                 }
-            });
+            );
 
-            // fallback: if load already fired
-            if (document.readyState === 'complete') {
+            // ---------- FALLBACK ----------
+
+            if (
+                document.readyState ===
+                'complete'
+            ) {
+
                 createCandles();
+
                 updateTimerDisplay();
+
                 startTimer();
             }
+
         })();
+
     </script>
+
 </body>
 </html>
